@@ -100,6 +100,7 @@ li a {
     hr {
         display: none;
     }
+    
 }
 
 .contain {
@@ -107,21 +108,27 @@ li a {
     justify-content: space-evenly;
     margin-top: 20px;
 }
-
 .price,
 .specials {
     max-width: 45%;
     border: 3px solid var(--color2);
     border-radius: 10px;
     padding: 10px;
+    height: 40vh;
+    display: grid;
+    grid-template-rows: 5fr auto 1fr;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
 }
-
-.price img,
-.specials img {
-    width: 100%;
+.image {
+    background-size: cover;
+    background-position: center;
 }
-
+.image:nth-of-type(1) {
+    background-image: url('./images/price.jpg');
+}
+.image:nth-of-type(2) {
+    background-image: url('./images/specials.jpg');
+}
 .price button,
 .specials button {
     padding: 5px;
