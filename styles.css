@@ -72,9 +72,13 @@ li a {
     color: white;
     text-decoration: none;
 }
-
-
 @media screen and (max-width: 400px) {
+    h1 {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
     .home {
         height: 80vh;
     }
@@ -86,7 +90,7 @@ li a {
 }
 @media screen and (min-width: 800px) {
     .home {
-        height: 120vh;
+        height: 100vh;
     }
     .about {
         display: grid;
