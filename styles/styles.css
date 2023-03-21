@@ -1,0 +1,142 @@
+:root {
+    --color1: #000010;
+    --color2: #1e2d4c;
+    --color3: #515c95;
+    --color4: #9492e8;
+    --color5: #eacdff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    padding-top: 5px;
+    line-height: 2;
+}
+nav {
+    position: sticky;
+    top: 20px;
+    left: 0;
+    background-image: linear-gradient(to right,
+    rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+form {
+    text-align: center;
+}
+
+.home {
+    height: 100vh;
+    background-image: url('/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 400px) {
+    .home {
+        height: 80vh;
+    }
+    h1{
+        line-height: 4;
+    }
+    
+}
+.contain {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.price,
+.specials {
+    max-width: 30%;
+    border: 3px solid var(--color2);
+    border-radius: 10px;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+}
+
+.price img,
+.specials img {
+    width: 100%;
+}
+
+.price button,
+.specials button {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--color5);
+    color: white;
+    background-color: var(--color2);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.recipes {
+    background-color: var(--color2);
+    color: white;
+}
+.recipes h2 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 2rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.card {
+    border: 3px solid var(--color5);
+    border-radius: 10px;
+    background-color: var(--color5);
+    margin: 0 10px 10px 10px;
+    font-size: 1.2rem;
+    color: #000010;
+}
+.card img {
+    width: 100%;
+    
+}
+@media screen and (min-width: 40em) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+.card button {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--color5);
+    color: white;
+    background-color: var(--color2);
+    padding: 5px 10px;
+}
+.card button:hover {
+    color: var(--color1);
+    border-color: var(--color1);
+    background-color: var(--color5);
+}
+.about {
+    background-color: var(--color5);
+    padding: 30px;
+}
