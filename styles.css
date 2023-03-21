@@ -106,7 +106,7 @@ li a {
 
 .price,
 .specials {
-    max-width: 30%;
+    max-width: 40%;
     border: 3px solid var(--color2);
     border-radius: 10px;
     padding: 10px;
