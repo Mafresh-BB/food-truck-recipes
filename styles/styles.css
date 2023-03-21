@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'head';
+    src: url('../fonts/amaranth-regular-webfont.woff2') format('woff2'),
+         url('../fonts/amaranth-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'body';
+    src: url('../fonts/economica-regular-otf-webfont.woff2') format('woff2'),
+         url('../fonts/economica-regular-otf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root {
     --color1: #000010;
     --color2: #1e2d4c;
@@ -12,19 +32,42 @@
     padding: 0;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: body;
+}
 h1 {
     text-align: center;
     padding-top: 5px;
     line-height: 2;
+    font-family: head;
+}
+h2 {
+    font-family: head;
 }
 nav {
     position: sticky;
     top: 20px;
     left: 0;
-    background-image: linear-gradient(to right,
-    rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+    background-color: var(--color2);
+    padding: 10px;
 }
+.submit {
+    border: 1px solid var(--color5);
+    padding: 5px;
+    border-radius: 10px;
+    width: 5rem;
+    background-color: var(--color2);
+    color: var(--color5);
+}
+.submit:hover {
+    background-color: var(--color5);
+    border: 1px solid var(--color2);
+    color: var(--color1);
+}
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -54,11 +97,26 @@ li a {
     .home {
         height: 80vh;
     }
-    h1{
+
+    h1 {
         line-height: 4;
     }
-    
+
 }
+@media screen and (min-width: 800px) {
+    .home {
+        height: 120vh;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+    hr {
+        display: none;
+    }
+}
+
 .contain {
     display: flex;
     justify-content: space-evenly;
@@ -88,55 +146,149 @@ li a {
     background-color: var(--color2);
     padding: 5px 10px;
     text-align: center;
+    width: 100%;
+}
+
+.price button:hover,
+.specials button:hover {
+    color: var(--color1);
+    background-color: var(--color5);
+    border: 1px solid var(--color1);
 }
 
 .recipes {
     background-color: var(--color2);
     color: white;
 }
+
 .recipes h2 {
     text-align: center;
     text-decoration: underline;
     padding: 2rem;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+
 .card {
     border: 3px solid var(--color5);
     border-radius: 10px;
     background-color: var(--color5);
     margin: 0 10px 10px 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #000010;
+    height: 17rem;
+
 }
+
+.img {
+    height: 40%;
+    width: 100%;
+}
+
+.card:nth-of-type(1) .img {
+    background-image: url('/images/dates.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-of-type(2) .img {
+    background-image: url('/images/white-bread.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-of-type(3) .img {
+    background-image: url('/images/turkey.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-of-type(4) .img {
+    background-image: url('/images/sallad.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-of-type(5) .img {
+    background-image: url('/images/potato.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-of-type(6) .img {
+    background-image: url('/images/soup.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .card img {
     width: 100%;
-    
+
 }
+
 @media screen and (min-width: 40em) {
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+
 }
+
 .card button {
-    padding: 5px;
     border-radius: 4px;
     border: 1px solid var(--color5);
     color: white;
     background-color: var(--color2);
     padding: 5px 10px;
+    width: 100%;
 }
+
 .card button:hover {
     color: var(--color1);
     border-color: var(--color1);
     background-color: var(--color5);
 }
+
+.card h4 {
+    text-align: center;
+}
+
+.card p {
+    padding: 5px;
+}
+
 .about {
     background-color: var(--color5);
     padding: 30px;
+}
+
+footer {
+    background-color: var(--color1);
+    color: var(--color5);
+    height: 20vh;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+.icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+footer a:hover {
+    font-size: 1.5rem;
+    transition: 0.6s;
 }
