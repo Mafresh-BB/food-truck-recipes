@@ -190,7 +190,7 @@ li a {
 }
 
 .card:nth-of-type(1) .img {
-    background-image: url(',/images/dates.jpg');
+    background-image: url('./images/dates.jpg');
     background-size: cover;
     background-position: center;
 }
