@@ -1,23 +1,4 @@
-@font-face {
-    font-family: 'head';
-    src: url('../fonts/amaranth-regular-webfont.woff2') format('woff2'),
-         url('../fonts/amaranth-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
-
-
-
-
-@font-face {
-    font-family: 'body';
-    src: url('../fonts/economica-regular-otf-webfont.woff2') format('woff2'),
-         url('../fonts/economica-regular-otf-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 :root {
     --color1: #000010;
     --color2: #1e2d4c;
@@ -36,7 +17,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: body;
+    font-family: 'Economica', sans-serif;
 }
 h1 {
     text-align: center;
@@ -45,7 +26,7 @@ h1 {
     font-family: head;
 }
 h2 {
-    font-family: head;
+    font-family: 'Amaranth', sans-serif;
 }
 nav {
     position: sticky;
