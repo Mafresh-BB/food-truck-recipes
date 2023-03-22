@@ -29,8 +29,9 @@ h2 {
     font-family: 'Amaranth', sans-serif;
 }
 nav {
-    position: sticky;
-    top: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
     left: 0;
     background-color: var(--color2);
     padding: 10px;
@@ -61,22 +62,23 @@ form {
 }
 
 .home {
-    height: 100vh;
+    height: 80vh;
     background-image: url('./images/bg.jpg');
     background-position: center;
     background-size: cover;
     color: white;
+    margin-top: 85px;
 }
 
 li a {
     color: white;
     text-decoration: none;
 }
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     h1 {
         font-size: 0.9rem;
     }
-}
+} */
 
 @media screen and (max-width: 576px) {
     .home {
@@ -84,14 +86,12 @@ li a {
     }
 
     h1 {
-        line-height: 4;
+        padding: 10px;
     }
 
 }
-@media screen and (min-width: 800px) {
-    .home {
-        height: 100vh;
-    }
+@media screen and (min-width: 760px) {
+    
     .about {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -114,21 +114,22 @@ li a {
     border: 3px solid var(--color2);
     border-radius: 10px;
     padding: 10px;
-    height: 40vh;
+    height: 50vh;
     display: grid;
-    grid-template-rows: 5fr auto 1fr;
+    grid-template-rows: 5fr 1fr auto;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
 }
 .image {
     background-size: cover;
     background-position: center;
 }
-.image:nth-of-type(1) {
+.price .image {
     background-image: url('./images/price.jpg');
 }
-.image:nth-of-type(2) {
+.specials .image {
     background-image: url('./images/specials.jpg');
 }
+
 .price button,
 .specials button {
     padding: 5px;
