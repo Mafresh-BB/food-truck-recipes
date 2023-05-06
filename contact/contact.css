@@ -5,36 +5,16 @@
     --color4: #9492e8;
     --color5: #eacdff;
 }
-
 body {
     background-color: var(--color2);
-    color: white;
-    height: 100vh;
-    font-family: 'Economica', sans-serif;
 }
-h1 {
-    text-align: center;
-    font-family: 'Amaranth', sans-serif;}
 
-form {
-    display: flex;
-    flex-direction: column;
-    background: rgb(234, 205, 255);
-    background: linear-gradient(184deg, rgba(234, 205, 255, 1) 0%, rgba(199, 74, 233, 1) 30%, rgba(204, 27, 232, 1) 60%, rgba(217, 143, 233, 1) 100%);
-    width: 70%;
+#mc_embed_signup {
     margin: 0 auto;
-    height: 70vh;
-    color: black;
-    padding: 30px 20px;
-    border: 5px solid var(--color4);
     border-radius: 20px;
+    padding: 10px;
 }
-.form-shape input,
-.form-shape select,
-.form-shape textarea {
-    width: 92%;
-    padding: 0.5rem;
-}
-::placeholder {
-    color: grey;
+
+#mc-embedded-subscribe {
+    color: var(--color1);
 }
